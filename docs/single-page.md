@@ -1,9 +1,8 @@
 ---
-sidebar_label: 'Hi! New Sidebar'
+sidebar_label: 'Single Page'
 sidebar_position: 1
-title: Introduce
 ---
 
-# Hello
+# Single Page
 
-This is my **first Docusaurus document**!
+Hallo, This is my **first Docusaurus document**!
