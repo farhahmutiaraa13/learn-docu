@@ -3,21 +3,180 @@
  * and scoped locally.
  */
 
-.heroBanner {
-  padding: 4rem 0;
-  text-align: center;
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+.hero {
   position: relative;
+  background: #0f172a;
+  /* Make hero fill the viewport on first load */
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem 4rem;
   overflow: hidden;
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
-  }
+.backgroundDecorations {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.blob {
+  position: absolute;
+  width: 24rem;
+  height: 24rem;
+  border-radius: 9999px;
+  filter: blur(3rem);
+  opacity: 0.2;
+  mix-blend-mode: multiply;
+  animation: blob 8s infinite;
+}
+
+.blob1 {
+  top: -10rem;
+  right: -10rem;
+  background: #3b82f6;
+}
+
+.blob2 {
+  top: 10rem;
+  left: -10rem;
+  background: #22d3ee;
+  animation-delay: 2s;
+}
+
+.content {
+  position: relative;
+  z-index: 10;
+  max-width: 72rem;
+  margin: 0 auto;
+  text-align: center;
+  /* add vertical padding so content keeps comfortable spacing on small screens */
+  padding: 4rem 1rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 9999px;
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  color: #93c5fd;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(10px);
+}
+
+.badgeDot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+  background: #60a5fa;
+  animation: pulse 2s infinite;
+}
+
+.title {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1.05;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+}
+
+.titleGradient {
+  background: linear-gradient(90deg, #60a5fa, #22d3ee);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.subtitle {
+  color: #cbd5e1;
+  font-size: 1.125rem;
+  line-height: 1.9;
+  max-width: 42rem;
+  margin: 0 auto 3rem;
 }
 
 .buttons {
-  display: flex;
+  display: grid;
+  gap: 1rem;
+  justify-content: center;
+  width: min(100%, 35rem);
+  margin: 0 auto;
+}
+
+.btn {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+  text-decoration: none;
+}
+
+.primaryButton {
+  background: #2563eb;
+  color: #ffffff;
+  box-shadow: 0 20px 40px rgba(37, 99, 235, 0.25);
+}
+
+.primaryButton:hover {
+  background: #3b82f6;
+  transform: translateY(-2px);
+}
+
+.secondaryButton {
+  background: #0f172a;
+  color: #cbd5e1;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.secondaryButton:hover {
+  background: #1e293b;
+  color: #ffffff;
+}
+
+.icon {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+@media (min-width: 640px) {
+  .buttons {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@keyframes blob {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(1rem, -1.5rem) scale(1.05);
+  }
+  66% {
+    transform: translate(-1.5rem, 1rem) scale(0.95);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 0.55;
+  }
 }

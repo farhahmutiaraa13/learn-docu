@@ -1,11 +1,142 @@
 .features {
-  display: flex;
-  align-items: center;
-  padding: 2rem 0;
-  width: 100%;
+  /* Menggunakan variabel agar otomatis mengikuti warna background utama web */
+  background: var(--ifm-background-color);
+  padding: 6rem 0 4rem;
+  transition: background-color 0.3s ease;
 }
 
-.featureSvg {
-  height: 200px;
-  width: 200px;
+.inner {
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  align-items: center;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-bottom: 1rem;
+}
+
+.header h2 {
+  font-size: clamp(2rem, 2.5vw, 3rem);
+  /* Mengikuti warna judul (heading) global */
+  color: var(--ifm-heading-color);
+  margin-bottom: 1rem;
+}
+
+.header p {
+  /* Mengikuti warna teks paragraf global */
+  color: var(--ifm-font-color-base);
+  opacity: 0.85; /* Memberi efek sedikit memudar agar tidak mendominasi judul */
+  font-size: 1.125rem;
+  line-height: 1.9;
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* ============================
+   STYLING CARD (LIGHT MODE)
+   ============================ */
+.card {
+  background: #ffffff; /* Putih di mode terang */
+  border: 1px solid #e2e8f0;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.1);
+  border-color: var(--ifm-color-primary-light); /* Hover menggunakan warna utama web */
+}
+
+.iconWrapper {
+  width: 3.5rem;
+  height: 3.5rem;
+  background: #eff6ff; /* Biru sangat pudar untuk Light Mode */
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  transition: background-color 0.3s ease;
+}
+
+.icon {
+  font-size: 1.5rem;
+}
+
+.fileLabel {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.45rem 0.75rem;
+  /* Menggunakan palet utama untuk Light Mode */
+  background: #eef4ed; /* Mint Cream dari paletmu */
+  color: #13315c; /* Oxford Navy dari paletmu */
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: 9999px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  margin-bottom: 0.85rem;
+  color: var(--ifm-heading-color);
+}
+
+.cardDescription {
+  color: var(--ifm-font-color-base);
+  opacity: 0.9;
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+/* ============================
+   STYLING KHUSUS DARK MODE
+   ============================ */
+html[data-theme='dark'] .card {
+  /* Memakai Oxford Navy (biru lebih muda dari background utama) dari custom.css */
+  background: var(--ifm-background-surface-color);
+  border-color: #1a427b; /* Border biru gelap */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+html[data-theme='dark'] .card:hover {
+  /* Saat di-hover border berubah menyala (Powder Blue) */
+  border-color: var(--ifm-color-primary); 
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+}
+
+html[data-theme='dark'] .iconWrapper {
+  /* Background icon menyesuaikan di mode gelap */
+  background: #0b2545; /* Prussian Blue */
+  border: 1px solid #1a427b;
+}
+
+html[data-theme='dark'] .fileLabel {
+  background: #0b2545; /* Prussian Blue */
+  color: var(--ifm-color-primary); /* Powder Blue agar teksnya menyala */
+  border: 1px solid #1a427b;
 }

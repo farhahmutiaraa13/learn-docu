@@ -1,30 +1,44 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
-
-/* You can override the default Infima variables here. */
+/* ===============================
+   LIGHT MODE (Terang) - Putih Default
+   =============================== */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  /* Latar Belakang: Putih Murni | Teks: Abu gelap bawaan Docusaurus / Prussian Blue untuk Judul */
+  --ifm-background-color: #ffffff;
+  --ifm-font-color-base: #1c1e21; /* Warna teks paragraf bawaan (abu-abu gelap) agar nyaman dibaca */
+  --ifm-heading-color: #0b2545; /* Prussian Blue untuk judul (h1, h2, h3) */
+  
+  /* Warna Utama/Interaktif: Oxford Navy */
+  --ifm-color-primary: #13315c;
+  --ifm-color-primary-dark: #112c53;
+  --ifm-color-primary-darker: #10294e;
+  --ifm-color-primary-darkest: #0d2240;
+  --ifm-color-primary-light: #153665;
+  --ifm-color-primary-lighter: #16396a;
+  --ifm-color-primary-lightest: #1a427b;
+
+  /* Navbar dibiarkan default (mengikuti background putih dengan garis bawah tipis) */
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* ===============================
+   DARK MODE (Gelap)
+   =============================== */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  /* Background: Prussian Blue | Teks: Mint Cream */
+  --ifm-background-color: #0b2545;
+  --ifm-background-surface-color: #13315c; /* Oxford Navy untuk background Card */
+  --ifm-font-color-base: #eef4ed; /* Teks paragraf Mint Cream */
+  --ifm-heading-color: #ffffff; /* Judul putih agar lebih menonjol */
+
+  /* Warna Utama/Interaktif: Powder Blue */
+  --ifm-color-primary: #8da9c4;
+  --ifm-color-primary-dark: #799bb9;
+  --ifm-color-primary-darker: #6f94b3;
+  --ifm-color-primary-darkest: #5b81a0;
+  --ifm-color-primary-light: #a1b7cd;
+  --ifm-color-primary-lighter: #abbed1;
+  --ifm-color-primary-lightest: #c9d5e2;
+  
+  /* Navbar lebih pekat */
+  --ifm-navbar-background-color: #0f172a;
 }
+

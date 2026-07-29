@@ -1,50 +1,47 @@
-import clsx from 'clsx';
+import React from 'react';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
-    description: (
-      <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
-      </>
-    ),
+    icon: <span className={styles.icon}>⚙️</span>,
+    title: 'Konfigurasi Inti',
+    file: 'docusaurus.config.js',
+    description:
+      'Mempelajari cara mengatur metadata situs, navigasi utama (navbar & footer), dan integrasi plugin bawaan Docusaurus.',
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
-    description: (
-      <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
-      </>
-    ),
+    icon: <span className={styles.icon}>📄</span>,
+    title: 'Sistem Routing & Docs',
+    file: 'sidebars.js & /docs',
+    description:
+      'Mengeksplorasi pembuatan hierarki dokumen yang rapi, penomoran otomatis, dan pengelolaan sidebar navigasi kiri.',
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
-      </>
-    ),
+    icon: <span className={styles.icon}>💻</span>,
+    title: 'Kekuatan MDX',
+    file: '.mdx files',
+    description:
+      'Menyelami kemampuan menulis Markdown yang digabungkan dengan komponen React (JSX) untuk membuat dokumentasi interaktif.',
+  },
+  {
+    icon: <span className={styles.icon}>🧩</span>,
+    title: 'Kustomisasi Tema',
+    file: 'custom.css & Swizzle',
+    description:
+      'Mengubah palet warna default, menyesuaikan Dark/Light mode, dan memodifikasi komponen bawaan React menggunakan fitur Swizzle.',
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({icon, title, file, description}) {
   return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
-      </div>
+    <div className={styles.card}>
+      <div className={styles.iconWrapper}>{icon}</div>
+      <div className={styles.fileLabel}>{file}</div>
+      <Heading as="h3" className={styles.cardTitle}>
+        {title}
+      </Heading>
+      <p className={styles.cardDescription}>{description}</p>
     </div>
   );
 }
@@ -52,10 +49,13 @@ function Feature({Svg, title, description}) {
 export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
-      <div className="container">
-        <div className="row">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
+      <div className={styles.inner}>
+        <div className={styles.header}>
+          <h2>Apa yang saya pelajari?</h2>
+        </div>
+        <div className={styles.grid}>
+          {FeatureList.map((feature, idx) => (
+            <Feature key={idx} {...feature} />
           ))}
         </div>
       </div>
