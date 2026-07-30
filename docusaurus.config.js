@@ -86,7 +86,7 @@ const config = {
         title: 'Farhah Site',
         logo: {
           alt: 'Farhah Site',
-          src: 'img/logo.svg',
+          src: 'img/logofar.png',
         },
         items: [
           {
@@ -97,7 +97,7 @@ const config = {
           },
           {to: '/blog', label: 'Logbook', position: 'right'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/farhahmutiaraa13',
             label: 'GitHub',
             position: 'right',
           },
@@ -118,10 +118,6 @@ const config = {
           {
             title: 'Community',
             items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
               {
                 label: 'Linkedin',
                 href: 'https://linkedin.com/in/farhahmutiaraarifa',

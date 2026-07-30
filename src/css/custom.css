@@ -42,3 +42,26 @@
   --ifm-navbar-background-color: #0f172a;
 }
 
+/* Adjust navbar spacing when using centered navbar items */
+.navbar {
+  position: relative;
+}
+
+.navbar__brand {
+  margin-right: 4rem;
+}
+
+.navbar__items--center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar__items--center .navbar__item {
+  justify-content: center;
+}
+
+
+

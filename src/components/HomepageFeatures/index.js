@@ -29,7 +29,7 @@ const FeatureList = [
     title: 'Kustomisasi Tema',
     file: 'custom.css & Swizzle',
     description:
-      'Mengubah palet warna default, menyesuaikan Dark/Light mode, dan memodifikasi komponen bawaan React menggunakan fitur Swizzle.',
+      'Mengubah palet warna default serta menyesuaikan Dark/Light mode',
   },
 ];
 
