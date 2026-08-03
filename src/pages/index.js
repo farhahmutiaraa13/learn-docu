@@ -29,12 +29,12 @@ function Hero() {
         </p>
 
         <div className={styles.buttons}>
-          <Link className={`${styles.btn} ${styles.primaryButton}`} to="/blog">
-            <span>Lihat Report</span>
+          <Link className={`${styles.btn} ${styles.primaryButton}`} to="/docs/single-page">
+            <span>Explorasi Features</span>
             <span className={styles.icon}>→</span>
           </Link>
-          <Link className={`${styles.btn} ${styles.secondaryButton}`} to="/docs/single-page">
-            <span>What I Learned</span>
+          <Link className={`${styles.btn} ${styles.secondaryButton}`} to="/blog">
+            <span>Logbook</span>
           </Link>
         </div>
       </div>
