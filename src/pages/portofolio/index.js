@@ -129,7 +129,7 @@ const PROJECTS = [
   }
 ];
 
-const CATEGORIES = ['Semua', 'Web App', 'Mobile App', 'UI/UX', 'Dokumentasi'];
+const CATEGORIES = ['Semua', 'Web App', 'Mobile App', 'UI/UX', 'Lainnya'];
 
 export default function Portfolio() {
   const { siteConfig } = useDocusaurusContext();
@@ -190,7 +190,6 @@ export default function Portfolio() {
                   >
                     <div className={styles.bannerOverlay} />
                     <span className={styles.categoryTag}>{project.category}</span>
-                    <span className={styles.cardIcon}>{project.icon}</span>
                   </div>
 
                   {/* Card Content */}
