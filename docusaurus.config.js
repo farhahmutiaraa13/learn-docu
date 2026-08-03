@@ -92,10 +92,11 @@ const config = {
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
-            position: 'right',
+            position: 'left',
             label: 'Hasil Eksplorasi',
           },
-          {to: '/blog', label: 'Logbook', position: 'right'},
+          {to: '/blog', label: 'Logbook', position: 'left'},
+          { to: "/portofolio", label: "Portofolio", position: "left" },
           {
             href: 'https://github.com/farhahmutiaraa13',
             label: 'GitHub',
