@@ -24,7 +24,7 @@ const PROJECTS = [
     icon: '📚',
     status: 'On-Progress',
     demoUrl: 'https://learn-docusaurus-nine.vercel.app/',
-    githubUrl: 'https://github.com/farhahmutiaraa13/learn-docu',
+    githubUrl: 'https://github.com/farhahmutiaraa13/learn-docu.git',
     highlight: true,
   },
   {
